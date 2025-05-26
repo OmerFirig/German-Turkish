@@ -38,7 +38,7 @@
 ## 🚀 Getting Started (Dev Mode)
 
 ```bash
-git clone https://github.com/your-username/german-turkish-flashcards.git
-cd german-turkish-flashcards
+git clone https://github.com/OmerFirig/German-Turkish.git
+cd German-Turkish
 npm install
 npm run dev
