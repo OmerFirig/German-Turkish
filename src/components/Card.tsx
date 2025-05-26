@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Heart } from 'lucide-react';
 import { Vocabulary } from '../types';
 import { getCategoryById } from '../data/vocabulary';
@@ -27,17 +27,10 @@ const Card: React.FC<CardProps> = ({
       className="relative w-full max-w-md h-64 cursor-pointer perspective-1000 mx-auto"
       onClick={onFlip}
     >
-      <div 
-        className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${
-          isFlipped ? 'rotate-y-180' : ''
-        }`}
-      >
+      <div className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
         {/* Front of card */}
         <div 
-          className={`absolute w-full h-full backface-hidden rounded-xl shadow-lg 
-            flex flex-col justify-center items-center p-6 ${
-            isFlipped ? 'hidden' : 'bg-white'
-          }`}
+          className="absolute w-full h-full backface-hidden bg-white rounded-xl shadow-lg flex flex-col justify-center items-center p-6"
           style={{ border: `3px solid ${category?.color || '#3B82F6'}` }}
         >
           <div 
@@ -83,10 +76,7 @@ const Card: React.FC<CardProps> = ({
         
         {/* Back of card */}
         <div 
-          className={`absolute w-full h-full backface-hidden rotate-y-180 rounded-xl shadow-lg 
-            flex flex-col justify-center items-center p-6 ${
-            isFlipped ? 'bg-white' : 'hidden'
-          }`}
+          className="absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-xl shadow-lg flex flex-col justify-center items-center p-6"
           style={{ border: `3px solid ${category?.color || '#3B82F6'}` }}
         >
           <div 

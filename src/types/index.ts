@@ -23,4 +23,20 @@ export interface GameState {
   favorites: string[];
   selectedCategories: string[];
   gameMode: 'learn' | 'quiz';
+  streak: number;
+  lastReviewDates: Record<string, string>;
+  masteredWords: string[];
+  dailyGoal: number;
+  wordsLearnedToday: number;
+  soundEnabled: boolean;
+  nightMode: boolean;
+}
+
+export interface Statistics {
+  totalWordsLearned: number;
+  longestStreak: number;
+  masteredWords: number;
+  averageAccuracy: number;
+  daysActive: number;
+  dailyGoalAchievements: number;
 }
